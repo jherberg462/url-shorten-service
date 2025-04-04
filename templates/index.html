@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL Shortener</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <script src="{{ url_for('static', filename='script.js') }}" defer></script> 
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
 </head>
 <body>
     <div class="container">
@@ -27,6 +27,10 @@
                 <button class="copy-btn" onclick="copyToClipboard('{{ short_url }}')">Copy</button>
             </div>
         {% endif %}
+        
+        <div class="ad-leaderboard">
+            <p>Advertisement (728x90)</p>
+        </div>
     </div>
 </body>
 </html>

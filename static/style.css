@@ -12,6 +12,8 @@
     --copy-btn-bg: #28a745;
     --copy-btn-hover: #218838;
     --shadow: rgba(0, 0, 0, 0.1);
+    --ad-bg: #e0e0e0; 
+    --ad-text: #666; 
 }
 
 body.dark-mode {
@@ -28,6 +30,8 @@ body.dark-mode {
     --copy-btn-bg: #2ecc71;
     --copy-btn-hover: #27ae60;
     --shadow: rgba(0, 0, 0, 0.3);
+    --ad-bg: #404040; 
+    --ad-text: #b0b0b0;
 }
 
 body {
@@ -39,7 +43,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease;
 }
 
 .container {
@@ -47,7 +51,7 @@ body {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--shadow);
-    max-width: 500px;
+    max-width: 800px; 
     width: 90%;
     text-align: center;
     transition: background-color 0.3s ease;
@@ -161,7 +165,26 @@ h1 {
     background-color: var(--copy-btn-hover);
 }
 
-@media (max-width: 480px) {
+.ad-leaderboard {
+    width: 728px;
+    height: 90px;
+    margin: 2rem auto 0; 
+    background-color: var(--ad-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--shadow);
+    transition: background-color 0.3s ease;
+}
+
+.ad-leaderboard p {
+    margin: 0;
+    color: var(--ad-text);
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
     .container {
         padding: 1.5rem;
     }
@@ -174,5 +197,9 @@ h1 {
     .header {
         flex-direction: column;
         gap: 0.5rem;
+    }
+    .ad-leaderboard {
+        width: 100%; 
+        height: 90px; 
     }
 }
